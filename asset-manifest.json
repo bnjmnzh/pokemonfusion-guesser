@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pokemonfusion-guesser/static/css/main.de9603c0.css",
+    "main.js": "/pokemonfusion-guesser/static/js/main.25ca870a.js",
+    "index.html": "/pokemonfusion-guesser/index.html",
+    "main.de9603c0.css.map": "/pokemonfusion-guesser/static/css/main.de9603c0.css.map",
+    "main.25ca870a.js.map": "/pokemonfusion-guesser/static/js/main.25ca870a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.de9603c0.css",
+    "static/js/main.25ca870a.js"
+  ]
+}

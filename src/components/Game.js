@@ -1,7 +1,6 @@
 import { Component } from 'react';
 import { Input, Form } from './styles';
 import pokemon from './pokemon';
-import './Game.css';
 import '../styles.css';
 
 // Returns random number between min and max (both included)
@@ -16,6 +15,7 @@ class Game extends Component {
             images: [],
             answers: [],
             gameCounter: 0,
+            score: 0,
             plusOne: false,
             timer: 60,
             userInput1: "",
@@ -61,14 +61,19 @@ class Game extends Component {
     validateAnswer = () => {
         if ([this.state.userInput1, this.state.userInput2].sort().join(',') === this.state.answers[this.state.gameCounter].sort().join(',')) {
             this.setState({ gameCounter: this.state.gameCounter + 1 });
+            this.setState({ score: this.state.score + 1 });
             this.setState({
                 userInput1: "",
                 userInput2: ""
             })
-            this.props.setScore(this.state.gameCounter);
+            this.props.setScore(this.state.score);
         } else {
             console.log(this.state.answers[this.state.gameCounter]);
         }
+    }
+
+    handleSkip = () => {
+        this.setState({ gameCounter: this.state.gameCounter + 1 });
     }
 
     // Populate list of images to use
@@ -114,7 +119,7 @@ class Game extends Component {
             <div className="game">
                 <div className="counterBar">
                     <div className="score">
-                        <span>Score: {this.state.gameCounter}</span>
+                        <span>Score: {this.state.score}</span>
                     </div>
                     <div className="timer" aria-label="Timer">
                         <span>Time: {this.state.timer}</span>
@@ -131,7 +136,10 @@ class Game extends Component {
                             <Input type="text" id="word1" value={this.state.userInput1} onChange={this.handleUserInput1} />
                             <Input type="text" id="word2" value={this.state.userInput2} onChange={this.handleUserInput2} />
                         </div>
-                        <input id="submit" type="submit" value="Submit" />
+                        <div className="buttons">
+                            <button id="skip" type="button" onClick={this.handleSkip}>Skip</button>
+                            <input id="submit" type="submit" value="Submit" />
+                        </div>
                     </Form>
                 </div>
             </div>

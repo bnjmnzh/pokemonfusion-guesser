@@ -2,6 +2,7 @@ import { Component } from 'react';
 import { Input, Form } from './styles';
 import pokemon from './pokemon';
 import './Game.css';
+import '../styles.css';
 
 // Returns random number between min and max (both included)
 function randomNumber(min, max) {
@@ -130,7 +131,7 @@ class Game extends Component {
                             <Input type="text" id="word1" value={this.state.userInput1} onChange={this.handleUserInput1} />
                             <Input type="text" id="word2" value={this.state.userInput2} onChange={this.handleUserInput2} />
                         </div>
-                        <input type="submit" value="Submit" />
+                        <input id="submit" type="submit" value="Submit" />
                     </Form>
                 </div>
             </div>

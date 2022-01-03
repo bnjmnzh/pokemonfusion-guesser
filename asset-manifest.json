@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/pokemonfusion-guesser/static/css/main.95633c72.css",
-    "main.js": "/pokemonfusion-guesser/static/js/main.bb58c9e5.js",
+    "main.js": "/pokemonfusion-guesser/static/js/main.1854ab80.js",
     "index.html": "/pokemonfusion-guesser/index.html",
     "main.95633c72.css.map": "/pokemonfusion-guesser/static/css/main.95633c72.css.map",
-    "main.bb58c9e5.js.map": "/pokemonfusion-guesser/static/js/main.bb58c9e5.js.map"
+    "main.1854ab80.js.map": "/pokemonfusion-guesser/static/js/main.1854ab80.js.map"
   },
   "entrypoints": [
     "static/css/main.95633c72.css",
-    "static/js/main.bb58c9e5.js"
+    "static/js/main.1854ab80.js"
   ]
 }

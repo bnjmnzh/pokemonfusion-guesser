@@ -62,12 +62,13 @@ class Game extends Component {
     validateAnswer = () => {
         if ([this.state.userInput1, this.state.userInput2].sort().join(',') === this.state.answers[this.state.gameCounter].sort().join(',')) {
             this.setState({ gameCounter: this.state.gameCounter + 1 });
-            this.setState({ score: this.state.score + 1 });
+            this.setState({ score: this.state.score + 1 }, () =>
+            this.props.setScore(this.state.score));
+            
             this.setState({
                 userInput1: "",
                 userInput2: ""
             })
-            this.props.setScore(this.state.score);
             this.setState({ wrong: false })
         } else {
             console.log(this.state.answers[this.state.gameCounter]);

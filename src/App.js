@@ -36,7 +36,9 @@ class App extends React.Component {
     })
   }
 
-  setScore = (score) => { this.setState({ counter: score }) }
+  setScore = (score) => { 
+    this.setState({ counter: score });
+  }
 
   render () {
     return (

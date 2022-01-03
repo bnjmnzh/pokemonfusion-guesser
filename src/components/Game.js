@@ -19,7 +19,8 @@ class Game extends Component {
             plusOne: false,
             timer: 60,
             userInput1: "",
-            userInput2: ""
+            userInput2: "",
+            wrong: false
         }
     }
 
@@ -67,8 +68,10 @@ class Game extends Component {
                 userInput2: ""
             })
             this.props.setScore(this.state.score);
+            this.setState({ wrong: false })
         } else {
             console.log(this.state.answers[this.state.gameCounter]);
+            this.setState({ wrong: true })
         }
     }
 
@@ -132,6 +135,7 @@ class Game extends Component {
 
                 <div className="pokemonContainer">
                     <Form onSubmit={this.handleSubmit}>
+                        {this.state.wrong && <p>Wrong!</p>}
                         <div className='inputs'>
                             <Input type="text" id="word1" value={this.state.userInput1} onChange={this.handleUserInput1} />
                             <Input type="text" id="word2" value={this.state.userInput2} onChange={this.handleUserInput2} />

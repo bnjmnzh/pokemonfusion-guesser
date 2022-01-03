@@ -79,7 +79,6 @@ const pokemon = {
     80: "Slowbro",
     81: "Magnemite",
     82: "Magneton",
-    83: "Farfetch’d",
     84: "Doduo",
     85: "Dodrio",
     86: "Seel",
